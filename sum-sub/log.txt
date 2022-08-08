@@ -1,0 +1,382 @@
+0000000057807654: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057807802: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057811442: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3478 us
+0000000057811505: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057812236: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 718 us
+0000000057814012: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057814038: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057814057: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057814772: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 706 us
+0000000057816366: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057816389: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057816408: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057817143: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 706 us
+0000000057818679: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057818701: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057818720: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057819432: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 704 us
+0000000057820988: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057821010: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057821029: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057821741: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 704 us
+0000000057823289: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057823312: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057823330: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057824043: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000057825603: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057825625: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057825644: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057826356: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 704 us
+0000000057827908: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057827931: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057827949: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057828662: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 704 us
+0000000057830218: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057830241: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057830260: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057830973: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000057832503: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057832526: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057832544: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057833257: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000057834802: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057834825: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057834886: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057835598: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 704 us
+0000000057837137: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057837160: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057837179: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057837891: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000057839433: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057839456: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057839475: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057840188: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000057841710: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057841733: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057841752: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057842466: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000057844015: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057844038: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057844057: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057844770: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 706 us
+0000000057846334: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057846357: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057846376: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057847089: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 706 us
+0000000057848693: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057848716: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057848735: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057849446: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 703 us
+0000000057850991: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057851014: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057851032: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057851744: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 703 us
+0000000057853283: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057853305: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057853324: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057854035: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 703 us
+0000000057855577: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000057855600: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000057855619: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000057856332: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 705 us
+0000000102307011: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102307097: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102310681: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3471 us
+0000000102310718: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102311459: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 728 us
+0000000102312918: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102312943: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102312962: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102313675: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 703 us
+0000000102314928: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102314951: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102314971: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102315681: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 703 us
+0000000102316951: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102316973: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102316992: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102317702: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000102318938: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102318961: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102318979: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102319688: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000102320923: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102320946: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102320964: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102321673: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000102322908: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102322931: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102322950: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102323659: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000102324991: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102325014: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102325032: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102325742: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000102326990: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102327013: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102327032: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102327742: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000102328980: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102329002: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102329021: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102329730: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000102330966: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102330988: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102331007: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102331716: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000102332973: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102332996: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102333015: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102333727: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 705 us
+0000000102334975: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102334999: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102335017: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102335729: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000102336968: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102336990: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102337009: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102337720: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 703 us
+0000000102338967: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102338990: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102339008: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102339720: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000102340959: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102340982: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102341000: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102341712: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000102342950: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102342973: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102342992: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102343703: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000102344941: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102344963: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102344982: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102345693: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000102346932: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102346955: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102346973: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102347685: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000102348926: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000102348948: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000102348967: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000102349679: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000123582876: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123583023: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123587212: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 4070 us
+0000000123587274: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123587994: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 707 us
+0000000123589257: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123589282: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123592852: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3501 us
+0000000123592880: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123593589: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 700 us
+0000000123593909: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123593926: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123597467: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3482 us
+0000000123597493: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123598200: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 698 us
+0000000123599409: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123599431: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123602987: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3498 us
+0000000123603014: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123603724: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123603996: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123604014: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123607578: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3507 us
+0000000123607605: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123608315: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123609535: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123609557: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123613150: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3509 us
+0000000123613177: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123613887: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123614199: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123614222: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123617756: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3476 us
+0000000123617783: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123618492: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123619707: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123619729: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123623261: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3477 us
+0000000123623288: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123623996: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000123624284: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123624306: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123627841: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3479 us
+0000000123627867: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123628576: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 701 us
+0000000123629789: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123629811: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123633345: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3478 us
+0000000123633372: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123634082: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123634368: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123634390: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123637977: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3504 us
+0000000123638004: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123638714: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123639928: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123639950: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123643485: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3479 us
+0000000123643512: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123644221: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123644494: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123644511: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123648045: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3477 us
+0000000123648071: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123648781: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123649993: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123650015: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123653554: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3483 us
+0000000123653581: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123654291: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 703 us
+0000000123654564: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123654581: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123658130: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3483 us
+0000000123658157: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123658866: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 701 us
+0000000123660072: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123660094: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123663658: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3489 us
+0000000123663685: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123664396: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 703 us
+0000000123664669: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123664686: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123668222: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3479 us
+0000000123668248: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123668958: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123670184: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123670206: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123673745: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3481 us
+0000000123673771: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123674481: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123674748: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123674774: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123678310: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3480 us
+0000000123678337: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123679047: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123680279: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123680300: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123683836: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3480 us
+0000000123683863: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123684572: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123684830: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123684846: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123688380: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3480 us
+0000000123688406: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123689115: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123690346: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123690367: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123693900: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3478 us
+0000000123693926: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123694635: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000123694892: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123694908: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123698444: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3482 us
+0000000123698470: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123699178: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 700 us
+0000000123700391: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123700412: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123703949: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3483 us
+0000000123703976: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123704685: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000123704942: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123704958: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123708504: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3492 us
+0000000123708530: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123709240: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123710453: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123710474: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123714019: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3490 us
+0000000123714045: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123714754: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123715011: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123715027: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123718561: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3481 us
+0000000123718588: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123719297: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123720513: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123720558: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123724090: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3477 us
+0000000123724116: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123724825: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000123725078: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123725095: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123728634: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3485 us
+0000000123728661: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123729369: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 701 us
+0000000123730584: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123730605: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123734164: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3502 us
+0000000123734191: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123734900: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123735173: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123735194: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123738731: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3484 us
+0000000123738758: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123739467: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123740682: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123740703: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123744239: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3483 us
+0000000123744266: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123744974: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 701 us
+0000000123745246: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123745267: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123748805: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3484 us
+0000000123748831: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123749540: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123750753: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123750774: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123754308: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3480 us
+0000000123754334: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123755043: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 702 us
+0000000123755315: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123755337: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123758872: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3481 us
+0000000123758898: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123759607: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 701 us
+0000000123760820: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123760842: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123764387: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3491 us
+0000000123764436: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123765166: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 722 us
+0000000123765425: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123765441: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123768976: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3481 us
+0000000123769003: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123769712: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123770923: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123770945: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123774485: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3485 us
+0000000123774511: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123775222: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 703 us
+0000000123775478: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123775494: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000123779026: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3479 us
+0000000123779051: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000123779761: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000123781132: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000123781153: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000123784684: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3479 us
+0000000123784710: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000123785422: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 704 us
+0000000142217658: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000142217741: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000142221538: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3485 us
+0000000142221582: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000142222305: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 710 us
+0000000142223582: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000142223607: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000142227162: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3491 us
+0000000142227194: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000142227902: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sub_vec in 700 us
+0000000142228189: 	fred_sys: hw-task: sum_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000142228214: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sum_vec
+0000000142231744: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sum_vec in 3476 us
+0000000142231774: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sum_vec
+0000000142232485: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: sum_vec in 702 us
+0000000142233712: 	fred_sys: hw-task: sub_vec got slot: 0 of its partition: p0, inserted in fri queue
+0000000142233736: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: sub_vec
+0000000142237266: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: sub_vec in 3475 us
+0000000142237296: 	fred_sys: slot: 0 of partition: p0 started for hw-task: sub_vec
+0000000142238004: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: su
