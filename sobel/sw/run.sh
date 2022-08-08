@@ -6,7 +6,7 @@ sleep 0.1
 
 # launch the apps
 app_pid=()
-./sobel &
+./synthetic &
 app_pid+=($!)
 
 # wait the apps to finish and kill the power sampler
