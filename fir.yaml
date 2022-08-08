@@ -3,6 +3,6 @@ dart:
       - hw_ips:
         - ip_name: "fir"
           top_name: "fir_top"
-          timeout: 1000
-          buffers: [32768, 32768, 32768]
+          timeout: 10000
+          buffers: [32768, 32768]
 
