@@ -3,6 +3,6 @@ dart:
       - hw_ips:
         - ip_name: "prem_config"
           top_name: "prem_config_top"
-          timeout: 1000
-          buffers: [32768, 32768, 32768]
+          timeout: 10000
+          buffers: [32768, 32768]
 

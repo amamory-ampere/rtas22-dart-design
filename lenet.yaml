@@ -3,6 +3,6 @@ dart:
       - hw_ips:
         - ip_name: "lenet"
           top_name: "lenet_top"
-          timeout: 1000
-          buffers: [32768, 32768, 32768]
+          timeout: 10000
+          buffers: [8192, 80]
 

@@ -1,0 +1,41 @@
+0000000022982572: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000022983011: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000022986742: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: lenet in 3630 us
+0000000022986815: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023017101: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30274 us
+0000000023017444: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023017463: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023017531: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023047728: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30188 us
+0000000023047970: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023048125: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023048146: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023078492: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30337 us
+0000000023078702: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023078805: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023078824: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023108977: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30145 us
+0000000023109210: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023109250: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023109270: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023139567: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30288 us
+0000000023139809: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023139902: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023139921: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023170233: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30304 us
+0000000023170461: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023170501: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023170521: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023200803: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30274 us
+0000000023201011: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023201051: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023201093: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023231333: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30232 us
+0000000023231564: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023231617: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023231637: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023261844: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30199 us
+0000000023262048: 	fred_sys: hw-task: lenet got slot: 0 of its partition: p0, inserted in fri queue
+0000000023262089: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: lenet
+0000000023262140: 	fred_sys: slot: 0 of partition: p0 started for hw-task: lenet
+0000000023292354: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: lenet in 30206 us
