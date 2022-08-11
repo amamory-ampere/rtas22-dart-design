@@ -1,0 +1,9 @@
+0000000016842263: 	fred_sys: hw-task: prem_config got slot: 0 of its partition: p0, inserted in fri queue
+0000000016842400: 	fred_sys: start rcfg of slot: 0 of partition: p0 for hw-task: prem_config
+0000000016846294: 	fred_sys: devcfg, slot: 0 of partition: p0 rcfg completed for hw-task: prem_config in 3556 us
+0000000016846359: 	fred_sys: slot: 0 of partition: p0 started for hw-task: prem_config
+0000000016846397: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: prem_config in 28 us
+0000000030630623: 	fred_sys: hw-task: prem_config got slot: 0 of its partition: p0, inserted in fri queue
+0000000030630693: 	fred_sys: skipping rcfg of slot: 0 of partition: p0 for hw-task: prem_config
+0000000030630716: 	fred_sys: slot: 0 of partition: p0 started for hw-task: prem_config
+0000000030630754: 	fred_sys: slot: 0 of partition: p0 completed execution of hw-task: prem_config in 26 us
