@@ -68,7 +68,7 @@ You need to setup an OS with Xilinx depedencies to run the acceleration examples
 
 
 If you are used with the Petalinux flow, then it is more convenient to build a complete image, using Yocto image [petalinux-image-everything.bb](https://github.com/Xilinx/meta-petalinux/blob/master/recipes-core/images/petalinux-image-everything.bb). This image will include all possible depedencies (XRT, OpenCL, AI libs) to run the examples.
-It is also possible to use the [petalinux-image-minimal.bb](https://github.com/Xilinx/meta-petalinux/blob/master/recipes-core/images/petalinux-image-minimal.bb) recipe for an image with shorter compilation time, but then the following depencies must be added manually:
+It is also possible to use the [petalinux-image-minimal.bb](https://github.com/Xilinx/meta-petalinux/blob/master/recipes-core/images/petalinux-image-minimal.bb) recipe for an image with shorter compilation time, but then the following depencies must be added [manually](https://github.com/Xilinx/XRT/issues/3650):
 
 ```
 IMAGE_INSTALL_append = " opencv-dev"
@@ -88,7 +88,17 @@ An alternative resource to build your own Linux Image is to use [meta-retis](htt
 
 ## Running the example on the ZCU102 board
 
+**TODO**
 
+## Examing the Host code
+
+[OpenCL](https://docs.xilinx.com/r/en-US/ug1393-vitis-application-acceleration/OpenCL-Programming) is used in the host side of ZCU102.
+
+**TODO**
+
+## Examing the Device code
+
+**TODO** HLS.
 
 ## Other documents
 
@@ -96,7 +106,23 @@ An alternative resource to build your own Linux Image is to use [meta-retis](htt
  - https://github.com/Xilinx/Vitis_Accel_Examples/tree/2020.2/hello_world
  - https://xilinx.github.io/Vitis_Accel_Examples/2020.2/html/hello_world.html
  - https://docs.xilinx.com/r/2020.2-English/ug1393-vitis-application-acceleration/Installing-the-Vitis-Software-Platform
+ - https://github.com/Xilinx/Vitis_Embedded_Platform_Source/blob/2020.2/README.md
  - https://docs.xilinx.com/r/en-US/ug1393-vitis-application-acceleration/Using-Vitis-Embedded-Platforms?tocId=rhJV73slymTI10Qb9AGwAQ
+ - [Creating an Acceleration Platform for Vitis Part One: Creating the Hardware Project for the Acceleration Platform in Vivado](https://support.xilinx.com/s/article/1138208?language=en_US)
+ - [Creating an Acceleration Platform for Vitis Part Two: Creating the software project for the Acceleration Platform in PetaLinux](https://support.xilinx.com/s/article/1138667?language=en_US)
  - 
 
+## Next Steps
+
+Here is a list of possible next designs:
+
+ - https://github.com/Xilinx/Vitis-Tutorials/tree/2020.2/Hardware_Accelerators/Design_Tutorials/01-convolution-tutorial
+ - [1D FFT](https://xilinx.github.io/Vitis_Libraries/dsp/2020.2/user_guide/L1.html#d-floating-point-fp32-fft)
+ - [vision examples](https://xilinx.github.io/Vitis_Libraries/vision/2020.2/overview.html)
+ - [vision examples benchmark](https://xilinx.github.io/Vitis_Libraries/vision/2022.1/Benchmark.html#datasets)
+ - https://github.com/Xilinx/Vitis_Libraries/tree/master/vision/L2
+ - https://github.com/Xilinx/Vitis_Libraries/issues/79
+ - https://github.com/Xilinx/Vitis_Libraries/issues/80
+ - https://github.com/Xilinx/Vitis_Libraries/issues/113
+ - 
 
