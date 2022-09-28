@@ -53,14 +53,67 @@ After these steps, sysroot is located in `/opt/Xilinx/images/2020.2/sdk/sysroots
 
 ## Running the synthesis
 
-At this step, we are ready to run the design flow with the following command:
+At this step, we are ready to build the hardware design with the following command:
 
 ```
 cd Vitis_Accel_Examples/hello_world
-make build TARGET=hw DEVICE='xilinx_zcu102_base_202020_1' HOST_ARCH=aarch64 EDGE_COMMON_SW=/opt/Xilinx/images/2020.2/sdk/sysroots/aarch64-xilinx-linux/
+make build TARGET=hw DEVICE='xilinx_zcu102_base_202020_1' HOST_ARCH=aarch64 EDGE_COMMON_SW=/opt/Xilinx/images/2020.2/sdk/
 ```
 
-The entire process takes about 15 minutes.
+The entire synthesis process takes about 15 minutes.
+
+## Compiling the application in the host computer
+
+In this step we compile the application:
+
+```
+cd Vitis_Accel_Examples/hello_world
+make host TARGET=hw DEVICE='xilinx_zcu102_base_202020_1' HOST_ARCH=aarch64 EDGE_COMMON_SW=/opt/Xilinx/images/2020.2/sdk/
+```
+
+This will link to header files located in `/opt/Xilinx/images/2020.2/sdk/sysroots/aarch64-xilinx-linux/usr/include/xrt`. It will generate the executable `hello_world`. Run the following command to check the executable:
+
+```
+$ file ./hello_world 
+./hello_world: ELF 64-bit LSB shared object, ARM aarch64,
+```
+
+## Compiling the application in the ZCU102 board
+
+
+```
+mkdir vadd; cd vadd
+wget https://raw.githubusercontent.com/Xilinx/Vitis_Accel_Examples/2020.2/hello_world/src/host.cpp
+wget https://raw.githubusercontent.com/Xilinx/Vitis_Accel_Examples/2020.2/common/includes/xcl2/xcl2.cpp
+wget https://raw.githubusercontent.com/Xilinx/Vitis_Accel_Examples/2020.2/common/includes/xcl2/xcl2.hpp
+g++ -o hello_world xcl2.cpp host.cpp -I/usr/include/xrt -Wall -O0 -g -std=c++11 -fmessage-length=0 -lOpenCL -pthread  -lrt -lstdc++
+```
+
+
+## Transfering the design and the host application to the board
+
+```
+$ scp ./hello_world root@<board IP>:~
+$ scp ./build_dir.hw.xilinx_zcu102_base_202020_1/vadd.xclbin root@<board IP>:~
+vadd.xclbin    
+```
+
+```
+# ./hello_world vadd.xclbin 
+XRT build version: 2.8.0
+Build hash: f19a872233fbfe2eb933f25fa3d9a780ced774e5
+Build date: 2021-03-30 19:53:41
+Git branch: 2020.2
+PID: 821
+UID: 0
+[Wed Sep 28 13:56:53 2022 GMT]
+HOST: xilinx-zcu102-2020_2
+EXE: /home/root/hello_world
+[XRT] ERROR: No devices found
+[XRT] ERROR: No devices found
+[XRT] ERROR: No devices found
+<BASEDIR>/Vitis_Accel_Examples/common/includes/xcl2/xcl2.cpp:34 Error calling err = cl::Platform::get(&platforms), error code is: -1001
+```
 
 ## Building the OS
 
