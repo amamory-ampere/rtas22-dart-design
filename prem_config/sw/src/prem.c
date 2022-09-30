@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <assert.h>
 #include <time.h>
 #include "fred_lib.h"
 
@@ -11,6 +12,9 @@
 
 typedef uint64_t data_t;
 const uint32_t AXIM_MAX_DATA_SIZE = 32;
+
+// comment this to run only the fred version
+//#define SELF_CHECKING
 
 // change here to set up the # in/out and execution cycles of the hw module
 #define IN_MEM_SIZE 16
@@ -29,6 +33,7 @@ const int hw_id = 100;
 void init_vect(data_t* base_idx, data_t value, unsigned int size)
 {
 	for (unsigned int i = 0; i < size; ++i) {
+//		printf ("%d\n",i);
 		base_idx[i] = value;
 	}
 }
@@ -88,6 +93,8 @@ int main (int argc, char **argv)
 		in_mem_size = atoi(argv[2]);
 		out_mem_size = atoi(argv[3]);
 	}
+	assert((in_mem_size*sizeof(data_t)+3) <= 32*1024);
+	assert(out_mem_size*sizeof(data_t) <= 32*1024);
 	printf ("Running for %d cycle, with %d inputs, %d outputs\n", exec_cycles, in_mem_size, out_mem_size);
 	data_t *expected_mem_out = malloc (sizeof(data_t)*out_mem_size);
     
@@ -130,6 +137,7 @@ int main (int argc, char **argv)
 	}
 	clock_gettime(CLOCK_MONOTONIC, &end);		
 
+#ifdef SELF_CHECKING
 	// Calculating total time taken by the FPGA offloading.
 	double time_taken;
 	time_taken = (end.tv_sec - start.tv_sec) * 1e9;
@@ -172,7 +180,7 @@ int main (int argc, char **argv)
 	print_vect(expected_mem_out, MIN(5,out_mem_size));
 	printf("Output Content [0:9]:\n");
 	print_vect(mem_out, MIN(5,out_mem_size));
-
+#endif
 	// this loop is required just to avoid messing up with the printed messages 
 	// caused by the messages printed by fred_free
 	for(i=0;i<100000000;i++);

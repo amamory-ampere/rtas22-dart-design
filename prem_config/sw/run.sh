@@ -9,7 +9,7 @@ sleep 1
 
 # launch the apps
 app_pid=()
-./prem_config &
+./prem_config 16777216 2048 2048 &
 app_pid+=($!)
 
 # wait the apps to finish and kill the power sampler
