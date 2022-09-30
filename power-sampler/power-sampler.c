@@ -28,7 +28,7 @@ $ gcc power-sampler.c -o power-sampler
 #define VCCAUX 12
 #define VCC1V2 13
 #define VCC3V3 14
-#define VADJ_FMC 15
+#define VADJ_FMC 15 // this is not accounted. why ?!
 #define MGTAVCC 16
 #define MGTAVTT 17
 
@@ -176,9 +176,9 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 		counter++;
 	}
 
-	if (verbose == 1) {
-		fprintf(sav_ptr, "\n");
-	}
+	// if (verbose == 1) {
+	// 	fprintf(sav_ptr, "\n");
+	// }
 
 	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
@@ -191,7 +191,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 			inas[counter].voltage = atoi(buffer);
 
 			if(verbose==1) {
-				printf("Voltage # %d = %d \n", counter, atoi(buffer));
+				//printf("Voltage # %d = %d \n", counter, atoi(buffer));
 				fprintf(sav_ptr, "%s,", buffer);
 			}
 			fclose(ina_ptr);
@@ -202,7 +202,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 
 			inas[counter].current = atoi(buffer);
 			if(verbose==1) {
-				printf("Current # %d = %d \n", counter, atoi(buffer));
+				//printf("Current # %d = %d \n", counter, atoi(buffer));
 				fprintf(sav_ptr, "%s,", buffer);
 			}
 
@@ -210,9 +210,9 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 
 
 			if(inas[counter].last) {
-				if(verbose==1){
-					fprintf(sav_ptr, "\n");
-				}
+				// if(verbose==1){
+				// 	fprintf(sav_ptr, "\n");
+				// }
 				if (j == 0){
 				fprintf(sav_ptr, "PS Power(W), PL Power(W), MGT Power(W), Total Power(W)");
 				if(display==1){
