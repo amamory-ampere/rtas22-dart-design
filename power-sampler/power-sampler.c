@@ -131,7 +131,7 @@ void populate_ina_array(ina *inas) {
 
 	counter = 0;
 	while(1) {
-		sprintf(inas[counter].name, railname_arr[counter]);
+		snprintf(inas[counter].name, sizeof(inas[counter].name), "%s",railname_arr[counter]);
 		if(inas[counter].last == 1)
 			return;
 
@@ -154,7 +154,7 @@ void list_inas (ina *inas) {
 	return;
 }
 
-void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbose, int display, ina *inas) {
+void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbose, ina *inas) {
 	FILE *sav_ptr;
 	FILE *ina_ptr;
 
@@ -175,10 +175,8 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 
 		counter++;
 	}
-
-	// if (verbose == 1) {
-	// 	fprintf(sav_ptr, "\n");
-	// }
+    // print the last columns
+    fprintf(sav_ptr, "PS Power(W), PL Power(W), MGT Power(W), Total Power(W)\n");
 
 	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
@@ -206,20 +204,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 				fprintf(sav_ptr, "%s,", buffer);
 			}
 
-
-
-
 			if(inas[counter].last) {
-				// if(verbose==1){
-				// 	fprintf(sav_ptr, "\n");
-				// }
-				if (j == 0){
-				fprintf(sav_ptr, "PS Power(W), PL Power(W), MGT Power(W), Total Power(W)");
-				if(display==1){
-					printf("PS Power(W), PL Power(W), MGT Power(W), Total Power(W)\n");
-				}
-				fprintf(sav_ptr, "\n");
-				}
 
 				pspower = (float) (inas[VCCPSINTFP].voltage*inas[VCCPSINTFP].current+
 						inas[VCCINTLP].voltage*inas[VCCINTLP].current+
@@ -230,48 +215,27 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 						//inas[VCCOPS3].voltage*inas[VCCOPS3].current+
 						inas[VCCPSDDRPLL].voltage*inas[VCCPSDDRPLL].current)/1000.0;
 
-				fprintf(sav_ptr, " %g,", pspower);
-				if(display==1){
-					printf(" %g,", pspower);
-				}
 				plpower = (float) (inas[VCCINT].voltage*inas[VCCINT].current+
 						inas[VCCBRAM].voltage*inas[VCCBRAM].current+
 						inas[VCCAUX].voltage*inas[VCCAUX].current+
 						inas[VCC1V2].voltage*inas[VCC1V2].current+
 						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000.0;
 
-				fprintf(sav_ptr, " %g,", plpower);
-				if(display==1){
-					printf(" %g,", plpower);
-				}
 				mgtpower = (float) (inas[MGTRAVCC].voltage*inas[MGTRAVCC].current+
 						inas[MGTRAVTT].voltage*inas[MGTRAVTT].current+
 						inas[MGTAVCC].voltage*inas[MGTAVCC].current+
 						inas[MGTAVTT].voltage*inas[MGTAVTT].current+
 						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000.0;
 
-				fprintf(sav_ptr, " %g,", mgtpower);
-				if(display==1){
-					printf(" %g,", mgtpower);
-				}
-
-				fprintf(sav_ptr, " %g", mgtpower+plpower+pspower);
-				if(display==1){
-					printf(" %g\n", mgtpower+plpower+pspower);
-				}
-				fprintf(sav_ptr, "\n");
-
+				fprintf(sav_ptr, "%g,%g,%g,%g\n", pspower, plpower, mgtpower, mgtpower+plpower+pspower);
 				fclose(ina_ptr);
 				break;
 			}
-
 			fclose(ina_ptr);
-
 			counter++;
-
 		}
 
-        // running as fast as possible ?!?!?
+	// running as fast as possible ?!?!?
 	//sleep(sleep_per);
 	}
 	fclose(sav_ptr);
@@ -287,10 +251,9 @@ int main(int argc, char *argv[]) {
     	// run until the end of times ... or a CTRL+C
 	unsigned iterations = UINT32_MAX;
 	int verbose = 0;
-	int display = 0;
 	char target_file[50] = "./out.txt";
 
-	while ((opt = getopt(argc, argv, "t:o:vdn:l")) != -1) {
+	while ((opt = getopt(argc, argv, "t:o:vn:l")) != -1) {
 
 		switch (opt) {
 
@@ -306,10 +269,6 @@ int main(int argc, char *argv[]) {
 				printf("Verbose mode on\n");
 				verbose = 1;
 				break;
-			case 'd':
-				printf("Display mode on\n");
-				display = 1;
-				break;
 			case 'l':
 				list_inas(inas);
 				break;
@@ -319,7 +278,7 @@ int main(int argc, char *argv[]) {
 				break;
 		}
 	}
-	run_bm(target_file, sleep_per, iterations, verbose, display, inas);
+	run_bm(target_file, sleep_per, iterations, verbose, inas);
 
 	return 0;
 }
