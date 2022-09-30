@@ -245,8 +245,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 			counter++;
 		}
 
-	// running as fast as possible ?!?!?
-	//sleep(sleep_per);
+    	sleep(sleep_per);
 	}
 	fclose(sav_ptr);
 }
@@ -257,7 +256,8 @@ int main(int argc, char *argv[]) {
 	populate_ina_array(inas);
 
 	int opt;
-	int sleep_per = 1;
+    // run as fast as possible
+	int sleep_per = 0;
     	// run until the end of times ... or a CTRL+C
 	unsigned iterations = UINT32_MAX;
 	int verbose = 0;
