@@ -8,7 +8,7 @@
 
 PID=$!
 echo "power sample PID: $PID"
-sleep 0.1
+sleep 1
 
 # launch the apps
 app_pid=()
@@ -17,7 +17,7 @@ app_pid+=($!)
 
 # wait the apps to finish and kill the power sampler
 wait "${app_pid[@]}"
-sleep 0.1
+sleep 2
 kill $PID
 # usually the last line is not complete due to the kill. 
 # thus, this command discards the last line
