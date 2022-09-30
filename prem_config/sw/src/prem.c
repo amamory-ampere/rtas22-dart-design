@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
@@ -19,7 +20,7 @@ const uint32_t AXIM_MAX_DATA_SIZE = 32;
 #define MAX(x,y) ( (x) > (y) ? (x) : (y) )
 // do not change this part
 // the input and output time does not count in the prem model; 20 is the constant additional latency of the internal pipeline. with this constant, the final latency match with EXEC_CYCLES
-#define EXEC_SIZE MAX(0,EXEC_CYCLES-20-IN_MEM_SIZE-OUT_MEM_SIZE)
+//#define EXEC_SIZE MAX(0,EXEC_CYCLES-20-IN_MEM_SIZE-OUT_MEM_SIZE)
 
 data_t *mem_in, *mem_out;
 
@@ -77,8 +78,18 @@ int main (int argc, char **argv)
 	unsigned int lfsr;
 	int error_code = 0;
 	data_t count_input_val=0;
-	data_t expected_mem_out[OUT_MEM_SIZE];
 	struct timespec start, end;
+
+	unsigned exec_cycles = EXEC_CYCLES;
+	unsigned in_mem_size = IN_MEM_SIZE;
+	unsigned out_mem_size = OUT_MEM_SIZE;
+	if (argc == 4){
+		exec_cycles = atoi(argv[1]);
+		in_mem_size = atoi(argv[2]);
+		out_mem_size = atoi(argv[3]);
+	}
+	printf ("Running for %d cycle, with %d inputs, %d outputs\n", exec_cycles, in_mem_size, out_mem_size);
+	data_t *expected_mem_out = malloc (sizeof(data_t)*out_mem_size);
     
 	retval = fred_init(&fred);
 	if (retval) {
@@ -105,10 +116,10 @@ int main (int argc, char **argv)
 	}
 
 	// set input values
-	mem_in[0]=IN_MEM_SIZE;
-	mem_in[1]=EXEC_SIZE;
-	mem_in[2]=OUT_MEM_SIZE;
-	init_vect(&(mem_in[3]), 1, IN_MEM_SIZE);
+	mem_in[0]=in_mem_size;
+	mem_in[1]=exec_cycles;
+	mem_in[2]=out_mem_size;
+	init_vect(&(mem_in[3]), 1, in_mem_size);
 
 	// Call fred IP
 	clock_gettime(CLOCK_MONOTONIC, &start);
@@ -127,16 +138,16 @@ int main (int argc, char **argv)
 
 	// calculate expected value
 	clock_gettime(CLOCK_MONOTONIC, &start);
-	for (i = 3; i < IN_MEM_SIZE+3; ++i) {
+	for (i = 3; i < in_mem_size+3; ++i) {
 		count_input_val += mem_in[i];
 	}
 	lfsr = count_input_val;
 	//printf("in: 0x%lX\n", (long unsigned)lfsr);
-	for (i = 0; i < EXEC_SIZE; ++i) {
+	for (i = 0; i < exec_cycles; ++i) {
 		lfsr = pseudo_random(lfsr);
 	}
 	//printf("exec: 0x%lX\n", (long unsigned)lfsr);
-	for (i = 0; i < OUT_MEM_SIZE; ++i) {
+	for (i = 0; i < out_mem_size; ++i) {
 		expected_mem_out[i] = lfsr;
 		lfsr = pseudo_random(lfsr);		
 	}
@@ -149,18 +160,18 @@ int main (int argc, char **argv)
 	printf("Time taken by the CPU is : %09f\n", time_taken);
 
 	// validation
-	if (check_output(mem_out, expected_mem_out, OUT_MEM_SIZE) != 1){
+	if (check_output(mem_out, expected_mem_out, out_mem_size) != 1){
 		printf("Mismatch!\n");
 		error_code = 1;
 	}else{
 		printf("Match!\n");
 	}
 	printf("Input Content [0:9]:\n");
-	print_vect(&(mem_in[3]), MIN(5,IN_MEM_SIZE));
+	print_vect(&(mem_in[3]), MIN(5,in_mem_size));
 	printf("Expected Initial value at the output : 0x%lX \n", (long unsigned)expected_mem_out[0]);
-	print_vect(expected_mem_out, MIN(5,OUT_MEM_SIZE));
+	print_vect(expected_mem_out, MIN(5,out_mem_size));
 	printf("Output Content [0:9]:\n");
-	print_vect(mem_out, MIN(5,OUT_MEM_SIZE));
+	print_vect(mem_out, MIN(5,out_mem_size));
 
 	// this loop is required just to avoid messing up with the printed messages 
 	// caused by the messages printed by fred_free
