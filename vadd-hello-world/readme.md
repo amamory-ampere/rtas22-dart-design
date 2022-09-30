@@ -120,7 +120,7 @@ EXE: /home/root/hello_world
 You need to setup an OS with Xilinx depedencies to run the acceleration examples and *Petalinux* is used to customize the Linux distribution. But be aware that the learning curve can be steep. If you dont know Petalinux and Yocto and is expecting fast results, it's higly recommened to use a pre-built image. The pre-built images are available [here](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1065451521/2020.2+Release). Then download from the link [`2020.2-zcu102-release.tar.xz`](https://www.xilinx.com/member/forms/download/xef.html?filename=2020.2-zcu102-release.tar.xz). Finally, follow the procedure in the same link to extract and prepare the SD card.
 
 
-If you are used with the Petalinux flow, then it is more convenient to build a complete image, using Yocto image [petalinux-image-everything.bb](https://github.com/Xilinx/meta-petalinux/blob/master/recipes-core/images/petalinux-image-everything.bb). This image will include all possible depedencies (XRT, OpenCL, AI libs) to run the examples.
+If you are used with the [Petalinux flow](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2021.2/build/html/docs/Introduction/ZynqMPSoC-EDT/6-build-linux-sw-for-ps.html), then it is more convenient to build a complete image, using Yocto image [petalinux-image-everything.bb](https://github.com/Xilinx/meta-petalinux/blob/master/recipes-core/images/petalinux-image-everything.bb). This image will include all possible depedencies (XRT, OpenCL, AI libs) to run the examples.
 It is also possible to use the [petalinux-image-minimal.bb](https://github.com/Xilinx/meta-petalinux/blob/master/recipes-core/images/petalinux-image-minimal.bb) recipe for an image with shorter compilation time, but then the following depencies must be added [manually](https://github.com/Xilinx/XRT/issues/3650):
 
 ```
@@ -140,6 +140,8 @@ It is recommened to look at the `petalinux-image-everything.bb` and `petalinux-i
 An alternative resource to build your own Linux Image is to use [meta-retis](https://github.com/fred-framework/meta-retis) Yocto Layer, that creates other Yocto customized images like `retis-dev-image`, which is built on top of `petalinux-image-minimal`. `meta-retis` goal is to include resourses used for real-time linux setup, like, for instance, the PREEMPT-RT setup.
 
 ## Running the example on the ZCU102 board
+
+ - [SD Card preparation](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18842385/How+to+format+SD+card+for+SD+boot)
 
 **TODO**
 
@@ -163,7 +165,8 @@ An alternative resource to build your own Linux Image is to use [meta-retis](htt
  - https://docs.xilinx.com/r/en-US/ug1393-vitis-application-acceleration/Using-Vitis-Embedded-Platforms?tocId=rhJV73slymTI10Qb9AGwAQ
  - [Creating an Acceleration Platform for Vitis Part One: Creating the Hardware Project for the Acceleration Platform in Vivado](https://support.xilinx.com/s/article/1138208?language=en_US)
  - [Creating an Acceleration Platform for Vitis Part Two: Creating the software project for the Acceleration Platform in PetaLinux](https://support.xilinx.com/s/article/1138667?language=en_US)
- - 
+ - [How to create Ultra96v2 Linux-based Platform in Xilinx Vitis 2019.2](https://highlevel-synthesis.com/2019/11/07/how-to-create-ultra96v2-linux-based-platform-in-xilinx-vitis-2019-2/)
+ - [Using Xilinx Vitis for Embedded Hardware Acceleration - Petalinux](https://gpanders.com/blog/vitis-for-embedded-hardware-acceleration/)
 
 ## Next Steps
 
@@ -177,5 +180,9 @@ Here is a list of possible next designs:
  - https://github.com/Xilinx/Vitis_Libraries/issues/79
  - https://github.com/Xilinx/Vitis_Libraries/issues/80
  - https://github.com/Xilinx/Vitis_Libraries/issues/113
- - 
+ - https://www.hackster.io/dsp2/fft-acceleration-with-vitis-237412
+ - https://www.hackster.io/bradley-whitlock-ad0rx/xilinx-vitis-2020-2-edge-acceleration-fa8bc8
+ - https://www.hackster.io/whitney-knitter/vitis-acceleration-flow-on-kv260-vitis-platform-c3537e
+ - https://www.hackster.io/mohammad-hosseinabady2/ultra96v2-linux-based-platform-in-xilinx-vitis-2020-1-06f226
+ - [ROS integration](https://github.com/Xilinx/KRS/blob/main/sphinx/source/docs/howto.md)
 
