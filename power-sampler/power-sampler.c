@@ -177,7 +177,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 	int counter = 0;
 	while(1) {
 		if (verbose == 1) {
-			fprintf(sav_ptr, "%s (uV),%s (uA),", inas[counter].name, inas[counter].name);
+			fprintf(sav_ptr, "\"%s (uV)\",\"%s (uA)\",", inas[counter].name, inas[counter].name);
 		}
 		if(inas[counter].last == 1)
 			break;
@@ -185,7 +185,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 		counter++;
 	}
     // print the last columns
-    fprintf(sav_ptr, "PS Power(W), PL Power(W), MGT Power(W), Total Power(W)\n");
+    fprintf(sav_ptr, "\"PS Power(W)\",\"PL Power(W)\",\"MGT Power(W)\",\"Total Power(W)\"\n");
 
 	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
