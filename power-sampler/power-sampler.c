@@ -4,6 +4,10 @@ https://www.xilinx.com/developer/articles/accurate-design-power-measurement.html
 
 compile w:
 $ gcc power-sampler.c -o power-sampler
+
+todo:
+improve the sampling frequency by buffering all data into memory and write it into the file just in the end, when CTRL+C is hit
+
 */
 #include <stdlib.h>
 #include <stdint.h>
