@@ -165,7 +165,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 	sav_ptr = fopen(target_file, "w");
 
 	char buffer[20];
-    unsigned v1,v2;
+    int v1,v2;
 	float plpower = 0;
 	float pspower = 0;
 	float mgtpower = 0;
@@ -173,7 +173,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 	int counter = 0;
 	while(1) {
 		if (verbose == 1) {
-			fprintf(sav_ptr, "%s (mV),%s (mA),", inas[counter].name, inas[counter].name);
+			fprintf(sav_ptr, "%s (uV),%s (uA),", inas[counter].name, inas[counter].name);
 		}
 		if(inas[counter].last == 1)
 			break;
@@ -223,19 +223,19 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 						inas[VCCPSDDR].voltage*inas[VCCPSDDR].current+
 						//inas[VCCOPS].voltage*inas[VCCOPS].current+
 						//inas[VCCOPS3].voltage*inas[VCCOPS3].current+
-						inas[VCCPSDDRPLL].voltage*inas[VCCPSDDRPLL].current)/1000.0;
+						inas[VCCPSDDRPLL].voltage*inas[VCCPSDDRPLL].current)/1000000.0;
 
 				plpower = (float) (inas[VCCINT].voltage*inas[VCCINT].current+
 						inas[VCCBRAM].voltage*inas[VCCBRAM].current+
 						inas[VCCAUX].voltage*inas[VCCAUX].current+
 						inas[VCC1V2].voltage*inas[VCC1V2].current+
-						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000.0;
+						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
 
 				mgtpower = (float) (inas[MGTRAVCC].voltage*inas[MGTRAVCC].current+
 						inas[MGTRAVTT].voltage*inas[MGTRAVTT].current+
 						inas[MGTAVCC].voltage*inas[MGTAVCC].current+
 						inas[MGTAVTT].voltage*inas[MGTAVTT].current+
-						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000.0;
+						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
 
 				fprintf(sav_ptr, "%g,%g,%g,%g\n", pspower, plpower, mgtpower, mgtpower+plpower+pspower);
 				fclose(ina_ptr);
