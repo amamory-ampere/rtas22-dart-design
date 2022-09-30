@@ -168,7 +168,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 	int counter = 0;
 	while(1) {
 		if (verbose == 1) {
-			fprintf(sav_ptr, "%s mV,%s mA,", inas[counter].name, inas[counter].name);
+			fprintf(sav_ptr, "%s (mV),%s (mA),", inas[counter].name, inas[counter].name);
 		}
 		if(inas[counter].last == 1)
 			break;
@@ -214,9 +214,9 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 					fprintf(sav_ptr, "\n");
 				}
 				if (j == 0){
-				fprintf(sav_ptr, "PS Power, PL Power, MGT Power, Total Power");
+				fprintf(sav_ptr, "PS Power(W), PL Power(W), MGT Power(W), Total Power(W)");
 				if(display==1){
-					printf("PS Power, PL Power, MGT Power, Total Power\n");
+					printf("PS Power(W), PL Power(W), MGT Power(W), Total Power(W)\n");
 				}
 				fprintf(sav_ptr, "\n");
 				}
@@ -228,36 +228,36 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 						inas[VCCPSDDR].voltage*inas[VCCPSDDR].current+
 						//inas[VCCOPS].voltage*inas[VCCOPS].current+
 						//inas[VCCOPS3].voltage*inas[VCCOPS3].current+
-						inas[VCCPSDDRPLL].voltage*inas[VCCPSDDRPLL].current)/1000000.0;
+						inas[VCCPSDDRPLL].voltage*inas[VCCPSDDRPLL].current)/1000.0;
 
-				fprintf(sav_ptr, " %.3f,", pspower);
+				fprintf(sav_ptr, " %g,", pspower);
 				if(display==1){
-					printf(" %.3f,", pspower);
+					printf(" %g,", pspower);
 				}
 				plpower = (float) (inas[VCCINT].voltage*inas[VCCINT].current+
 						inas[VCCBRAM].voltage*inas[VCCBRAM].current+
 						inas[VCCAUX].voltage*inas[VCCAUX].current+
 						inas[VCC1V2].voltage*inas[VCC1V2].current+
-						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
+						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000.0;
 
-				fprintf(sav_ptr, " %.3f,", plpower);
+				fprintf(sav_ptr, " %g,", plpower);
 				if(display==1){
-					printf(" %.3f,", plpower);
+					printf(" %g,", plpower);
 				}
 				mgtpower = (float) (inas[MGTRAVCC].voltage*inas[MGTRAVCC].current+
 						inas[MGTRAVTT].voltage*inas[MGTRAVTT].current+
 						inas[MGTAVCC].voltage*inas[MGTAVCC].current+
 						inas[MGTAVTT].voltage*inas[MGTAVTT].current+
-						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
+						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000.0;
 
-				fprintf(sav_ptr, " %.3f,", mgtpower);
+				fprintf(sav_ptr, " %g,", mgtpower);
 				if(display==1){
-					printf(" %.3f,", mgtpower);
+					printf(" %g,", mgtpower);
 				}
 
-				fprintf(sav_ptr, " %.3f", mgtpower+plpower+pspower);
+				fprintf(sav_ptr, " %g", mgtpower+plpower+pspower);
 				if(display==1){
-					printf(" %.3f\n", mgtpower+plpower+pspower);
+					printf(" %g\n", mgtpower+plpower+pspower);
 				}
 				fprintf(sav_ptr, "\n");
 
