@@ -58,7 +58,8 @@ const char railname_arr[50][12] = {
 typedef struct ina {
 
 	char current_path[50];
-	char voltage_path[50];
+	char voltage1_path[50];
+    char voltage2_path[50];
 	char name[12];
 	int current;
 	int voltage;
@@ -115,8 +116,11 @@ void populate_ina_array(ina *inas) {
 			strcpy(inas[counter].current_path,fname_buff);
 			strcat(inas[counter].current_path,"/curr1_input");
 
-			strcpy(inas[counter].voltage_path,fname_buff);
-			strcat(inas[counter].voltage_path,"/in1_input");
+			strcpy(inas[counter].voltage1_path,fname_buff);
+			strcat(inas[counter].voltage1_path,"/in1_input");
+
+			strcpy(inas[counter].voltage2_path,fname_buff);
+			strcat(inas[counter].voltage2_path,"/in2_input");
 
 //			printf("found: %s\n", inas[counter].ina_dir);
 			inas[counter].last = 0;
@@ -161,6 +165,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 	sav_ptr = fopen(target_file, "w");
 
 	char buffer[20];
+    unsigned v1,v2;
 	float plpower = 0;
 	float pspower = 0;
 	float mgtpower = 0;
@@ -182,17 +187,22 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 		counter = 0;
 		while(1) {
 
-			ina_ptr = fopen(inas[counter].voltage_path, "r");
-
+			ina_ptr = fopen(inas[counter].voltage1_path, "r");
 			fscanf(ina_ptr,"%[^\n]", buffer);
+			v1 = atoi(buffer);
+			fclose(ina_ptr);
 
-			inas[counter].voltage = atoi(buffer);
+			ina_ptr = fopen(inas[counter].voltage2_path, "r");
+			fscanf(ina_ptr,"%[^\n]", buffer);
+			v2 = atoi(buffer);
+			fclose(ina_ptr);
+
+            inas[counter].voltage = labs(v1-v2);
 
 			if(verbose==1) {
 				//printf("Voltage # %d = %d \n", counter, atoi(buffer));
-				fprintf(sav_ptr, "%s,", buffer);
+				fprintf(sav_ptr, "%d,", inas[counter].voltage);
 			}
-			fclose(ina_ptr);
 
 			ina_ptr = fopen(inas[counter].current_path, "r");
 
