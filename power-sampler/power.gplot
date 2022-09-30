@@ -1,0 +1,16 @@
+
+set xlabel 'time ticks'
+set ylabel 'power (W)'
+
+set grid
+set key below center horizontal noreverse enhanced autotitle box dashtype solid
+set tics out nomirror
+set border 3 front linetype black linewidth 1.0 dashtype solid
+
+set mxtics 1
+
+set style line 1 linecolor rgb '#0060ad' linewidth 2 pointtype 1 ps 1
+
+set terminal png enhanced
+set output './power.png'
+plot './power.csv' using 1 with points linestyle 1 
