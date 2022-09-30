@@ -1,6 +1,9 @@
 /*
 source code from:
 https://www.xilinx.com/developer/articles/accurate-design-power-measurement.html
+
+compile w:
+$ gcc power-sampler.c -o power-sampler
 */
 #include <stdlib.h>
 #include <stdint.h>
@@ -151,7 +154,7 @@ void list_inas (ina *inas) {
 	return;
 }
 
-void run_bm (char target_file[50], int sleep_per, int iterations, int verbose, int display, ina *inas) {
+void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbose, int display, ina *inas) {
 	FILE *sav_ptr;
 	FILE *ina_ptr;
 
@@ -177,7 +180,7 @@ void run_bm (char target_file[50], int sleep_per, int iterations, int verbose, i
 		fprintf(sav_ptr, "\n");
 	}
 
-	for (int j = 0; j < iterations; j++) {
+	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
 		while(1) {
 
@@ -268,7 +271,8 @@ void run_bm (char target_file[50], int sleep_per, int iterations, int verbose, i
 
 		}
 
-		sleep(sleep_per);
+        // running as fast as possible ?!?!?
+	//sleep(sleep_per);
 	}
 	fclose(sav_ptr);
 }
@@ -280,7 +284,8 @@ int main(int argc, char *argv[]) {
 
 	int opt;
 	int sleep_per = 1;
-	int iterations = 1;
+    	// run until the end of times ... or a CTRL+C
+	unsigned iterations = UINT32_MAX;
 	int verbose = 0;
 	int display = 0;
 	char target_file[50] = "./out.txt";
