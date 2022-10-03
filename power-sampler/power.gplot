@@ -15,4 +15,4 @@ set datafile separator ','
 
 set terminal png enhanced
 set output './power.png'
-plot 'power.csv' using 1 with point, '' using 2 with point, '' using 3 with point, '' using 4 with point
+plot 'power.gplot' using 1 with point, '' using 2 with point, '' using 3 with point, '' using 4 with point
