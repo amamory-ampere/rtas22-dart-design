@@ -189,7 +189,6 @@ void run_bm (int sleep_per, unsigned iterations, int verbose) {
 	char buffer[20];
     int v1,v2,current;
 	int counter;
-    assert(iterations<=MAX_BUFFER_LINES);
 
 	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
