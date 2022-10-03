@@ -24,6 +24,12 @@ improve the sampling frequency by buffering all data into memory and write it in
 #include <assert.h>
 
 //These are specific to ZCU102
+/* 
+they are in order such that 
+/sys/class/hwmon/hwmon0/name -> ina226_u76 -> VCCPSINTFP
+/sys/class/hwmon/hwmon1/name -> ina226_u77 -> VCCINTLP
+...
+*/
 #define VCCPSINTFP 0
 #define VCCINTLP 1
 #define VCCPSAUX 2
@@ -146,6 +152,10 @@ void populate_ina_array() {
 	}
     g_n_sensors = counter;
 
+    // this is sorting the entries according to the sensor dir names:
+    // /sys/class/hwmon/hwmon0/name
+    // /sys/class/hwmon/hwmon1/name
+    // ...
 	qsort(inas, counter, sizeof(ina), cmp_ina);
 	if (counter > 0)
 		inas[counter-1].last = 1;
@@ -179,6 +189,7 @@ void run_bm (int sleep_per, unsigned iterations, int verbose) {
 	char buffer[20];
     int v1,v2,current;
 	int counter;
+    assert(iterations<=MAX_BUFFER_LINES);
 
 	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
@@ -199,8 +210,8 @@ void run_bm (int sleep_per, unsigned iterations, int verbose) {
 			current = atoi(buffer);
             fclose(ina_ptr);
 
-            assert(iterations<=MAX_BUFFER_LINES);
-            g_buffer[iterations*g_n_sensors + counter] = labs(v1-v2) * current;
+            assert(j<=MAX_BUFFER_LINES);
+            g_buffer[j*g_n_sensors + counter] = labs(v1-v2) * current;
 
 			if(inas[counter].last) {
 				break;
@@ -213,7 +224,7 @@ void run_bm (int sleep_per, unsigned iterations, int verbose) {
 }
 
 void exit_all(int sigid){
-    printf("Exting\n");
+    printf("Exiting\n");
     unsigned line;
     float pspower, plpower, mgtpower;
 	FILE *sav_ptr;
