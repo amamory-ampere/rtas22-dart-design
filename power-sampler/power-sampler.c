@@ -239,10 +239,8 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
 
 				fprintf(sav_ptr, "%g,%g,%g,%g\n", pspower, plpower, mgtpower, mgtpower+plpower+pspower);
-				fclose(ina_ptr);
 				break;
 			}
-			fclose(ina_ptr);
 			counter++;
 		}
         sleep(sleep_per);
