@@ -15,7 +15,7 @@ Currently it's working with a sampling frequency of 50 to 60 Hz on ZCU102.
 TODO:
 - Improve the sampling frequency by buffering all data into memory and write it into the file just in the end, when CTRL+C is hit
 See Commit https://github.com/amamory-ampere/rtas22-dart-design/commit/79ca7e794dd9a01a6c56b00bee6cf819888f077c
-but, aparently, the frequency dropped to around 35 Hz after the optimization... droping this for now due to lack of time.
+at Oct 3, 2022. Apparently, the frequency dropped to around 35 Hz after the optimization... dropping this for now due to lack of time.
 */
 #include <stdlib.h>
 #include <stdint.h>
