@@ -22,5 +22,6 @@ kill $PID
 # usually the last line is not complete due to the kill. 
 # thus, this command discards the last line
 head -n -1 temp_power.csv > power.csv
-
+# prepare for gnuplot
+cut -d',' -f37- power.csv > power.gplot
 

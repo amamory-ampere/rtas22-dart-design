@@ -7,7 +7,7 @@ cxx_srcs += $(wildcard ./src/*.cpp)
 objs = $(srcs:.c=.o) $(cxx_srcs:.cpp=.o)
 deps = $(objs:.o=.d)
 
-CFLAGS += -I $(fred_dir) -I $(fred_dir)/include -g  # -Wall  -Werror
+CFLAGS += -I $(fred_dir) -I $(fred_dir)/include -g  -O2 # -Wall  -Werror
 CXXFLAGS += $(CFLAGS)
 LDFLAGS += -L $(fred_dir) -L $(fred_dir)/lib -lfred
 
