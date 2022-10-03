@@ -15,6 +15,7 @@ improve the sampling frequency by buffering all data into memory and write it in
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <signal.h>
 
 //These are specific to ZCU102
 #define VCCPSINTFP 0
@@ -254,10 +255,19 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 	fclose(sav_ptr);
 }
 
+void exit_all(int sigid){
+    printf("Exting\n");
+    exit(0);
+}
+
 int main(int argc, char *argv[]) {
 
 	ina inas[30];
 	populate_ina_array(inas);
+
+    signal(SIGKILL,exit_all);
+    signal(SIGINT,exit_all);
+    signal(SIGTERM,exit_all);
 
 	int opt;
     // run as fast as possible
