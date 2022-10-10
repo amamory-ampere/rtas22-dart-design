@@ -10,6 +10,8 @@ const unsigned int MAT_SIZE = 16;
 data_t *mem_a, *mem_b,*mem_out;
 const int hw_id = 100;
 
+// comment the next line to run only in the FPGA and not in the CPU
+#define COMP_OUT
 
 void print_mat(data_t *base_idx, unsigned int size)
 {
@@ -123,6 +125,7 @@ int main (int argc, char **argv)
 	time_taken = (time_taken + (end.tv_nsec - start.tv_nsec)) * 1e-9;
 	printf("Time taken by FRED is : %09f\n", time_taken);
 
+#ifdef COMP_OUT
 	// generate the reference output
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	mat_mult_sw((data_t *)mem_a, (data_t *)mem_b, (data_t *)mem_expected_out, MAT_SIZE);
@@ -161,7 +164,7 @@ int main (int argc, char **argv)
 		if (errors>30)
 			break;
 	}
-
+#endif
 	// this loop is required just to avoid messing up with the printed messages 
 	// caused by the messages printed by fred_free
 	for(i=0;i<100000000;i++);
