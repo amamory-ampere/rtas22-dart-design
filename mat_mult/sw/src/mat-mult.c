@@ -1,17 +1,31 @@
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
 #include "fred_lib.h"
 
 typedef uint64_t data_t;
-const unsigned int MAT_SIZE = 16;
+const unsigned int MAT_SIZE = 128;
 data_t *mem_a, *mem_b,*mem_out;
 const int hw_id = 100;
 
 // comment the next line to run only in the FPGA and not in the CPU
-#define COMP_OUT
+//#define COMP_OUT
+
+//#define CPU_ENABLED
+#define FPGA_ENABLED
+//#define FPGA_ENABLED_TIMED
+
+#ifdef COMP_OUT
+#define CPU_ENABLED
+#define FPGA_ENABLED
+#endif
+
+
+// # of times the enabled computation is called
+#define REPEAT 100
 
 void print_mat(data_t *base_idx, unsigned int size)
 {
@@ -55,6 +69,7 @@ int main (int argc, char **argv)
 	struct fred_data *fred;
 	struct fred_hw_task *hw_ip;
     
+#ifdef FPGA_ENABLED
 	retval = fred_init(&fred);
 	if (retval) {
 		printf("fred_init failed for hw-task %u\n", hw_id);
@@ -83,7 +98,10 @@ int main (int argc, char **argv)
 		printf("fred_map_buff failed on buff 2 for mem_out\n");
 		error_code = 1;
 	}
-
+#else
+	mem_a = (data_t*)malloc(MAT_SIZE*MAT_SIZE*sizeof(data_t));
+	mem_b = (data_t*)malloc(MAT_SIZE*MAT_SIZE*sizeof(data_t));
+#endif
 	// set the input initial value
 	// fills mem_a with
 	// 	{2,0,0,0},
@@ -110,6 +128,11 @@ int main (int argc, char **argv)
 		}
 	}	
 
+   double time_taken;
+   for(int r=0;r<REPEAT;++r){
+
+#ifdef FPGA_ENABLED
+  #ifdef FPGA_ENABLED_TIMED
 	// Call fred IP
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	retval = fred_accel(fred, hw_ip);
@@ -120,12 +143,15 @@ int main (int argc, char **argv)
 	clock_gettime(CLOCK_MONOTONIC, &end);		
 
 	// Calculating total time taken by the FPGA offloading.
-	double time_taken;
 	time_taken = (end.tv_sec - start.tv_sec) * 1e9;
 	time_taken = (time_taken + (end.tv_nsec - start.tv_nsec)) * 1e-9;
 	printf("Time taken by FRED is : %09f\n", time_taken);
+  #else
+        fred_accel(fred, hw_ip);
+  #endif
+#endif
 
-#ifdef COMP_OUT
+#ifdef CPU_ENABLED
 	// generate the reference output
 	clock_gettime(CLOCK_MONOTONIC, &start);
 	mat_mult_sw((data_t *)mem_a, (data_t *)mem_b, (data_t *)mem_expected_out, MAT_SIZE);
@@ -135,8 +161,9 @@ int main (int argc, char **argv)
 	time_taken = (end.tv_sec - start.tv_sec) * 1e9;
 	time_taken = (time_taken + (end.tv_nsec - start.tv_nsec)) * 1e-9;
 	printf("Time taken by the CPU is : %09f\n", time_taken);
+#endif
 
-
+#ifdef COMP_OUT
 	if (memcmp(mem_out, mem_expected_out, MAT_SIZE*MAT_SIZE*sizeof(data_t))){
 		printf("Mismatch!\n");
 		error_code = 1;
@@ -165,6 +192,9 @@ int main (int argc, char **argv)
 			break;
 	}
 #endif
+
+   }// for REPEAT
+
 	// this loop is required just to avoid messing up with the printed messages 
 	// caused by the messages printed by fred_free
 	for(i=0;i<100000000;i++);
