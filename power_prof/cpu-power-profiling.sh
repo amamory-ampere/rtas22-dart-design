@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cpufreq-set -g userspace
-./power-sampler -o temp_power.csv &
+../power-sampler/power-sampler -o temp_power.csv &
 
 sleep 2
 # the idle power for each OPP
