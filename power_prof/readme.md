@@ -20,13 +20,20 @@ The following steps, implemented in the `cpu-power-profiling.sh` script, were do
  - kill the power sampler
 
 
+Running this script generated the follwing plots:
+
+![Alt text](power.png "power plot for CPUs")
+
+And the following table after running the script `split-average.sh`:
+
 |  Freq (MHz)        | Busy Power (W)  | Idle Power(W)  |
 |--------------------|-----------------|----------------|
-|      			1200 |               0 | 	       0.59 |
-| 			     600 |               0 |           0.33 |
-| 			     400 |               0 |           0.00 |
-| 			     300 |               0 |           0.00 |
+|      			1200 |         1.68179 | 	    2.16797 |
+| 			     600 |         1.64398 |        1.87808 |
+| 			     400 |         1.62836 |        1.77113 |
+| 			     300 |         1.62087 |        1.72494 |
 
+PL idle power is **0.815439**.
 
 ## Power down unused blocks
 
