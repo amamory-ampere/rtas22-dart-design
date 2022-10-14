@@ -26,15 +26,17 @@ Running this script generated the follwing plots:
 
 And the following table after running the script `split-average.sh`:
 
-|  Freq (MHz)        | Busy Power (W)  | Idle Power(W)  |
+|  Freq (MHz)        | Idle Power (W)  | Busy Power(W)  |
 |--------------------|-----------------|----------------|
 |      			1200 |         1.68179 | 	    2.16797 |
 | 			     600 |         1.64398 |        1.87808 |
 | 			     400 |         1.62836 |        1.77113 |
 | 			     300 |         1.62087 |        1.72494 |
 
-PL idle power is **0.815439**.
+# Power profiling PL in idle
+
+Using the same script above, PL idle power is **0.815439**.
 
 ## Power down unused blocks
 
- - [powerdown RPU and GPU](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1417150870/Power+Down+Unused+Blocks)
+ - TBD: [powerdown RPU and GPU](https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1417150870/Power+Down+Unused+Blocks)
