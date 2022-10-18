@@ -264,7 +264,8 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
 
                 // ddrpower is not included in the sum because it is already accounted in the PS power
-				fprintf(sav_ptr, "%ld,%g,%g,%g,%g,%g\n", micros()-initial_timestamp, ddrpower, pspower, plpower, mgtpower, mgtpower+plpower+pspower);
+				//fprintf(sav_ptr, "%ld,%g,%g,%g,%g,%g\n", micros()-initial_timestamp, ddrpower, pspower, plpower, mgtpower, mgtpower+plpower+pspower);
+                fprintf(sav_ptr, "%g,%g,%g,%g,%g\n", ddrpower, pspower, plpower, mgtpower, mgtpower+plpower+pspower);
 				break;
 			}
 			counter++;
