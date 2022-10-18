@@ -24,6 +24,7 @@ at Oct 3, 2022. Apparently, the frequency dropped to around 35 Hz after the opti
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
+#include <time.h>
 
 //These are specific to ZCU102
 /* 
@@ -82,6 +83,20 @@ typedef struct ina {
 	int voltage;
 	int last;
 } ina;
+
+/// Convert seconds to microseconds
+#define SEC_TO_USEC(sec)    ((sec)*1000000)
+/// Convert nanoseconds to microseconds
+#define NS_TO_USEC(ns)      ((ns)/1000)
+
+uint64_t micros() {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    uint64_t us =
+        SEC_TO_USEC((uint64_t)ts.tv_sec) + NS_TO_USEC((uint64_t)ts.tv_nsec);
+    return us;
+}
+
 
 int cmp_ina(const void *a, const void *b) {
 	ina *temp1 = (ina*)a;
@@ -200,6 +215,8 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
     //fprintf(sav_ptr, "\"PS Power(W)\",\"PL Power(W)\",\"MGT Power(W)\",\"Total Power(W)\"\n");
     fprintf(sav_ptr, "\"DDR Power(W)\",\"PS Power(W)\",\"PL Power(W)\",\"MGT Power(W)\",\"Total Power(W)\"\n");
 
+    const uint64_t initial_timestamp = micros();
+
 	for (unsigned j = 0; j < iterations; j++) {
 		counter = 0;
 		while(1) {
@@ -247,7 +264,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 						inas[VCC3V3].voltage*inas[VCC3V3].current)/1000000.0;
 
                 // ddrpower is not included in the sum because it is already accounted in the PS power
-				fprintf(sav_ptr, "%g,%g,%g,%g,%g\n", ddrpower, pspower, plpower, mgtpower, mgtpower+plpower+pspower);
+				fprintf(sav_ptr, "%ld,%g,%g,%g,%g,%g\n", micros()-initial_timestamp, ddrpower, pspower, plpower, mgtpower, mgtpower+plpower+pspower);
 				break;
 			}
 			counter++;
