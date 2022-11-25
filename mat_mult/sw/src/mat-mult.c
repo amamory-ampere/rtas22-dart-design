@@ -16,7 +16,7 @@ const int hw_id = 100;
 
 //#define CPU_ENABLED
 #define FPGA_ENABLED
-//#define FPGA_ENABLED_TIMED
+#define FPGA_ENABLED_TIMED
 
 #ifdef COMP_OUT
 #define CPU_ENABLED
@@ -160,7 +160,7 @@ int main (int argc, char **argv)
 	// Calculating total time taken by the program running in the CPU.
 	time_taken = (end.tv_sec - start.tv_sec) * 1e9;
 	time_taken = (time_taken + (end.tv_nsec - start.tv_nsec)) * 1e-9;
-	printf("Time taken by the CPU is : %09f\n", time_taken);
+	printf("Time taken by CPU is : %09f\n", time_taken);
 #endif
 
 #ifdef COMP_OUT

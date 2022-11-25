@@ -1,0 +1,1444 @@
+execve("/usr/bin/fred-server", ["fred-server"], 0xffffdd821840 /* 17 vars */) = 0
+brk(NULL)                               = 0xaaaad9bcb000
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=32529, ...}) = 0
+mmap(NULL, 32529, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffa8e85000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0E\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1413168, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffa8e83000
+mmap(NULL, 1485928, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xffffa8cf5000
+mprotect(0xffffa8e48000, 61440, PROT_NONE) = 0
+mmap(0xffffa8e57000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x152000) = 0xffffa8e57000
+mmap(0xffffa8e5d000, 11368, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffa8e5d000
+close(3)                                = 0
+mprotect(0xffffa8e57000, 12288, PROT_READ) = 0
+mprotect(0xaaaaaf92d000, 4096, PROT_READ) = 0
+mprotect(0xffffa8e8f000, 4096, PROT_READ) = 0
+munmap(0xffffa8e85000, 32529)           = 0
+brk(NULL)                               = 0xaaaad9bcb000
+brk(0xaaaad9bec000)                     = 0xaaaad9bec000
+fstat(1, {st_mode=S_IFREG|0644, st_size=1468, ...}) = 0
+openat(AT_FDCWD, "/sys/class/fpga_manager/fpga0/phy_bit_rcfg_done", O_RDONLY) = 3
+openat(AT_FDCWD, "/sys/class/fpga_manager/fpga0/phy_bit_rcfg_start", O_WRONLY) = 4
+openat(AT_FDCWD, "/sys/class/fpga_manager/fpga0/phy_bit_addr", O_WRONLY) = 5
+openat(AT_FDCWD, "/sys/class/fpga_manager/fpga0/phy_bit_size", O_WRONLY) = 6
+read(3, "38640\n", 8)                   = 6
+openat(AT_FDCWD, "log.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 7
+epoll_create1(0)                        = 8
+openat(AT_FDCWD, "/dev/fred/buffctl", O_RDWR) = 9
+openat(AT_FDCWD, "/opt/fredsys/arch.csv", O_RDONLY) = 10
+fstat(10, {st_mode=S_IFREG|0664, st_size=273, ...}) = 0
+read(10, "# FRED Architectural description"..., 4096) = 273
+read(10, "", 4096)                      = 0
+close(10)                               = 0
+openat(AT_FDCWD, "/sys/class/uio", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 10
+fstat(10, {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+getdents64(10, /* 8 entries */, 32768)  = 192
+getdents64(10, /* 0 entries */, 32768)  = 0
+close(10)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/./name", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/class/uio/../name", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/class/uio/uio0/name", O_RDONLY) = 10
+fstat(10, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(10, "slot_p0_s0\n", 4096)          = 11
+close(10)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/uio0/maps/map0/addr", O_RDONLY) = 10
+fstat(10, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(10, "0x00000000a0000000\n", 4096)  = 19
+close(10)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/uio0/maps/map0/size", O_RDONLY) = 10
+fstat(10, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(10, "0x0000000000010000\n", 4096)  = 19
+close(10)                               = 0
+openat(AT_FDCWD, "/dev/uio0", O_RDWR)   = 10
+mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_SHARED, 10, 0) = 0xffffa8ce5000
+openat(AT_FDCWD, "/sys/class/uio", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 11
+fstat(11, {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+getdents64(11, /* 8 entries */, 32768)  = 192
+getdents64(11, /* 0 entries */, 32768)  = 0
+close(11)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/./name", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/class/uio/../name", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/class/uio/uio0/name", O_RDONLY) = 11
+fstat(11, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(11, "slot_p0_s0\n", 4096)          = 11
+close(11)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/uio1/name", O_RDONLY) = 11
+fstat(11, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(11, "pr_decoupler_p0_s0\n", 4096)  = 19
+close(11)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/uio1/maps/map0/addr", O_RDONLY) = 11
+fstat(11, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(11, "0x00000000a0010000\n", 4096)  = 19
+close(11)                               = 0
+openat(AT_FDCWD, "/sys/class/uio/uio1/maps/map0/size", O_RDONLY) = 11
+fstat(11, {st_mode=S_IFREG|0444, st_size=4096, ...}) = 0
+read(11, "0x0000000000010000\n", 4096)  = 19
+close(11)                               = 0
+openat(AT_FDCWD, "/dev/uio1", O_RDWR)   = 11
+mmap(NULL, 65536, PROT_READ|PROT_WRITE, MAP_SHARED, 11, 0) = 0xffffa8cd5000
+timerfd_create(CLOCK_MONOTONIC, TFD_NONBLOCK) = 12
+openat(AT_FDCWD, "/opt/fredsys/hw_tasks.csv", O_RDONLY) = 13
+fstat(13, {st_mode=S_IFREG|0664, st_size=1187, ...}) = 0
+read(13, "# Fred-Linux hw-tasks descriptio"..., 4096) = 1187
+read(13, "", 4096)                      = 0
+close(13)                               = 0
+openat(AT_FDCWD, "/opt/fredsys/dart_fred/bits/p0/mat_mult_s0.bin", O_RDONLY) = 13
+fstat(13, {st_mode=S_IFREG|0664, st_size=16084176, ...}) = 0
+fstat(13, {st_mode=S_IFREG|0664, st_size=16084176, ...}) = 0
+lseek(13, 16080896, SEEK_SET)           = 16080896
+read(13, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3280) = 3280
+lseek(13, 0, SEEK_SET)                  = 0
+ioctl(9, _IOC(_IOC_READ|_IOC_WRITE, 0x7f, 0x1, 0x58), 0xaaaad9bdaa30) = 0
+openat(AT_FDCWD, "/dev/fred/buff_100", O_RDWR) = 14
+mmap(NULL, 16084176, PROT_READ|PROT_WRITE, MAP_SHARED, 14, 0) = 0xffffa7d7e000
+read(13, 0xffffa7d7e000, 16080896)      = 16080896
+read(13, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 3280
+close(13)                               = 0
+munmap(0xffffa7d7e000, 16084176)        = 0
+close(14)                               = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_NONBLOCK, 0) = 13
+unlinkat(AT_FDCWD, "/tmp/fred_sock", 0) = 0
+bind(13, {sa_family=AF_UNIX, sun_path="/tmp/fred_sock"}, 16) = 0
+listen(13, 1024)                        = 0
+rt_sigprocmask(SIG_BLOCK, [INT QUIT TERM], NULL, 8) = 0
+signalfd4(-1, [INT QUIT TERM], 8, SFD_NONBLOCK) = 14
+epoll_ctl(8, EPOLL_CTL_ADD, 14, {EPOLLIN, {u32=3653027784, u64=187650774190024}}) = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 3, {EPOLLPRI|EPOLLERR, {u32=3653027800, u64=187650774190040}}) = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 10, {EPOLLIN, {u32=3653027816, u64=187650774190056}}) = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 12, {EPOLLIN, {u32=3653027832, u64=187650774190072}}) = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 13, {EPOLLIN, {u32=3653027848, u64=187650774190088}}) = 0
+epoll_pwait(8, [{EPOLLIN, {u32=3653027848, u64=187650774190088}}], 3073, -1, NULL, 8) = 1
+accept(13, {sa_family=AF_UNIX}, [110->2]) = 15
+fcntl(15, F_GETFL)                      = 0x2 (flags O_RDWR)
+fcntl(15, F_SETFL, O_RDWR|O_NONBLOCK)   = 0
+epoll_ctl(8, EPOLL_CTL_ADD, 15, {EPOLLIN, {u32=3653027864, u64=187650774190104}}) = 0
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "e\0\0\0\0\0\0\0", 8)          = 8
+write(15, "\365\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "\311\0\0\0d\0\0\0", 8)        = 8
+ioctl(9, _IOC(_IOC_READ|_IOC_WRITE, 0x7f, 0x1, 0x58), 0xaaaad9bdab30) = 0
+ioctl(9, _IOC(_IOC_READ|_IOC_WRITE, 0x7f, 0x1, 0x58), 0xaaaad9bdab90) = 0
+ioctl(9, _IOC(_IOC_READ|_IOC_WRITE, 0x7f, 0x1, 0x58), 0xaaaad9bdabf0) = 0
+write(15, "Y\2\0\0\3\0\0\0", 8)         = 8
+write(15, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0\0\0\0/dev/fre"..., 3144) = 3144
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+fstat(7, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+write(7, "0000000011080661: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011081011: \tfred_sys: sta"..., 90) = 90
+write(5, "0x70d00000\n\0\377\377\0\0003\25\251\0\0\0\0\0", 24) = 24
+write(6, "16084176\n\0\221\257\252\252\0\0 \351\275\331\252\252\0\0", 24) = 24
+write(4, "1\0", 2)                      = 2
+epoll_pwait(8, [{EPOLLPRI|EPOLLERR, {u32=3653027800, u64=187650774190040}}], 3073, -1, NULL, 8) = 1
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "24766\n", 24)                  = 6
+write(7, "0000000011106634: \tfred_sys: dev"..., 111) = 111
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011106905: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95743765}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\6\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011111479: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011111947: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011112068: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011112287: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95764817}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\7\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011116851: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011117290: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011117405: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011117623: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95766597}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\10\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011122169: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011122608: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011122740: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011122968: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95766978}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\t\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011127507: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011127961: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011128081: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011128343: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95796990}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\n\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011132874: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011133313: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011133428: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011133646: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771927}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\v\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011138187: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011138626: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011138763: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011138983: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773767}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\f\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011143520: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011143975: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011144095: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011144312: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95769127}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\r\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011148873: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011149311: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011149427: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011149645: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771277}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\16\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011154213: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011154652: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011154789: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011155007: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95762236}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\17\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011159558: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011160014: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011160134: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011160381: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95769857}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\20\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011164948: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011165388: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011165504: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011165736: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95781799}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\21\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011170262: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011170719: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011170839: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011171058: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773508}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\22\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011175596: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011176054: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011176173: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011176391: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95769197}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\23\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011180952: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011181390: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011181504: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011181736: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95775628}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\24\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011186265: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011186721: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011186841: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011187059: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771738}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\25\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011191600: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011192053: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011192172: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011192390: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95768717}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\26\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011196948: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011197384: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011197498: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011197730: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95769178}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\27\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011202258: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011202739: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011202860: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011203077: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772077}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\30\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011207616: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011208074: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011208189: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011208407: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95770988}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\31\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011212966: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011213404: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011213520: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011213753: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95781968}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\32\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011218277: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011218762: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011218882: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011219101: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771047}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\33\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011223640: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011224098: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011224212: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011224430: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772628}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\34\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011228988: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011229427: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011229542: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011229775: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95788379}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\35\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011234296: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011234753: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011234873: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011235093: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95778418}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\36\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011239624: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011240081: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011240195: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011240413: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95765837}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\37\v\0\0", 4)                = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011244977: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011245416: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011245531: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011245764: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95788139}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, " \v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011250288: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011250767: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011250887: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011251106: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771987}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "!\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011255646: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011256102: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011256218: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011256435: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772838}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\"\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011260993: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011261431: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011261546: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011261780: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95788029}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "#\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011266304: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011266761: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011266881: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011267099: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772767}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "$\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011271638: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011272091: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011272206: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011272423: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95747425}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "%\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011277004: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011277442: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011277556: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011277789: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95785159}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "&\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011282316: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011282771: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011282891: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011283109: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95775628}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "'\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011287643: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011288100: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011288213: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011288432: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774848}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "(\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011292986: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011293425: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011293539: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011293773: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95789429}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, ")\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011298295: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011298778: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011298897: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011299113: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95770077}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "*\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011303654: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011304110: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011304226: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011304443: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95768608}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "+\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011309005: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011309442: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011309556: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011309789: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95784959}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, ",\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011314315: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011314772: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011314892: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011315112: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774168}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "-\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011319650: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011320107: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011320222: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011320441: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772778}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, ".\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011325024: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011325462: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011325577: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011325811: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95779058}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "/\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011330343: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011330798: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011330944: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011331162: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774367}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "0\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011335719: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011336158: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011336273: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011336491: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95755306}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "1\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011341053: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011341490: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011341604: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011341839: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95770397}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "2\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011346380: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011346862: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011346982: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011347201: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771708}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "3\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011351758: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011352197: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011352311: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011352530: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95759966}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "4\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011357082: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011357517: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011357631: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011357869: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773998}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "5\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011362407: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011362863: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011362982: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011363201: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771488}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "6\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011367761: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011368201: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011368315: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011368534: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95749105}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "7\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011373127: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011373565: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011373688: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011373919: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771207}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "8\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011378457: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011378910: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011379028: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011379246: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772618}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "9\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011383800: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011384235: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011384350: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011384568: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95761946}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, ":\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011389117: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011389583: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011389713: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011389937: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773198}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, ";\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011394475: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011394933: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011395082: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011395301: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771358}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "<\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011399859: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011400299: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011400414: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011400630: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95759876}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "=\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011405180: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011405617: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011405755: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011405974: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95770337}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, ">\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011410515: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011410973: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011411093: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011411312: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773978}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "?\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011415869: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011416308: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011416423: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011416641: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772918}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "@\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011421206: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011421643: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011421781: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011421999: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771697}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "A\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011426539: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011426993: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011427113: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011427331: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772407}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "B\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011431888: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011432326: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011432441: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011432659: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95770957}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "C\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011437197: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011437635: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011437772: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011437991: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771427}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "D\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011442530: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011442986: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011443105: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011443375: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95769467}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "E\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011447935: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011448375: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011448489: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011448722: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95776958}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "F\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011453240: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011453691: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011453816: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011454035: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771987}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "G\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011458573: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011459027: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011459147: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011459365: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771468}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "H\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011463922: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011464360: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011464474: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011464703: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95767727}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "I\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011469267: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011469722: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011469842: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011470059: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772697}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "J\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011474599: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011475057: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011475177: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011475397: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95776188}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "K\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011479950: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011480387: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011480501: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011480735: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95783958}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "L\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011485255: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011485706: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011485831: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011486049: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774828}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "M\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011490586: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011491040: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011491159: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011491406: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95801430}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "N\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011495933: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011496368: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011496482: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011496715: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772867}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "O\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011501239: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011501687: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011501832: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011502051: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95772528}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "P\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011506589: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011507044: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011507164: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011507382: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774688}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "Q\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011511935: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011512372: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011512485: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011512716: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773468}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "R\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011517282: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011517739: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011517859: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011518077: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771977}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "S\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011522616: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011523071: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011523185: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011523403: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773257}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "T\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011527960: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011528398: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011528512: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011528744: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95781689}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "U\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011533269: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011533725: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011533844: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011534061: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771577}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "V\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011538601: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011539058: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011539177: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011539422: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95799700}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "W\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011543954: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011544391: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011544505: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011544737: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95782678}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "X\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011549259: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011549708: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011549833: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011550052: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95761876}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "Y\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011554602: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011555059: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011555179: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011555398: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771347}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "Z\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011559957: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011560395: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011560510: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011560741: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95778459}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "[\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011565269: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011565755: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011565875: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011566095: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95770337}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "\\\v\0\0", 4)                 = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011570636: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011571092: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011571207: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011571424: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773968}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "]\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011575981: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011576419: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011576533: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011576766: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95788749}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "^\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011581287: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011581743: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011581863: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011582081: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774647}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "_\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011586619: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011587074: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011587189: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011587406: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771657}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "`\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011591961: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011592398: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011592511: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011592745: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95781158}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "a\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011597268: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011597724: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011597844: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011598062: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773868}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "b\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011602601: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011603056: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011603177: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011603395: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95771428}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "c\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011607953: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011608391: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011608507: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011608739: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95784348}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "d\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011613261: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011613746: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011613890: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011614108: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95774827}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "e\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011618644: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011619098: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011619213: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011619430: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95773678}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "f\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011623985: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011624424: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011624538: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011624772: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95784319}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "g\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011629300: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011629758: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011629878: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011630097: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95776028}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "h\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011634632: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "-\1\0\0d\0\0\0", 8)           = 8
+write(7, "0000000011635090: \tfred_sys: hw-"..., 103) = 103
+write(7, "0000000011635204: \tfred_sys: ski"..., 93) = 93
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=100000000}}, NULL) = 0
+write(7, "0000000011635422: \tfred_sys: slo"..., 84) = 84
+epoll_pwait(8, [{EPOLLIN, {u32=3653027816, u64=187650774190056}}], 3073, -1, NULL, 8) = 1
+timerfd_gettime(12, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=95748745}}) = 0
+timerfd_settime(12, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+read(10, "i\v\0\0", 4)                  = 4
+write(10, "\1\0\0\0", 4)                = 4
+write(7, "0000000011640002: \tfred_sys: slo"..., 106) = 106
+write(15, "\221\1\0\0\0\0\0\0", 8)      = 8
+epoll_pwait(8, [{EPOLLIN|EPOLLHUP, {u32=3653027864, u64=187650774190104}}], 3073, -1, NULL, 8) = 1
+read(15, "", 8)                         = 0
+epoll_ctl(8, EPOLL_CTL_DEL, 15, NULL)   = 0
+ioctl(9, _IOC(_IOC_WRITE, 0x7f, 0x2, 0x4), 0xaaaad9bdab30) = 0
+ioctl(9, _IOC(_IOC_WRITE, 0x7f, 0x2, 0x4), 0xaaaad9bdab90) = 0
+ioctl(9, _IOC(_IOC_WRITE, 0x7f, 0x2, 0x4), 0xaaaad9bdabf0) = 0
+close(15)                               = 0
+epoll_pwait(8, 

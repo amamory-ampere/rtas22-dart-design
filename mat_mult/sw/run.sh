@@ -13,7 +13,9 @@ sleep 1
 # launch the apps
 app_pid=()
 # make sure it is running a free core and w higher prio then other tasks
-taskset -c 3 chrt -f 1 ./mat_mult > run.log &
+# WHEN RUNNING W FRED, make sure to run fred server 
+# taskset -c 2 chrt -f 99 fred-server &
+taskset -c 3 chrt -f 91 ./mat_mult > run.log &
 app_pid+=($!)
 
 # wait the apps to finish and kill the power sampler
@@ -27,9 +29,8 @@ head -n -1 temp_power.csv > power.csv
 cut -d',' -f37- power.csv > power.gplot
 
 # get the execution times
-cut -d' ' -f8 run.log > exec_time.log
-# remove empty lines
-sed '/^$/d' -i exec_time.log
+grep "Time taken" run.log > run_clean.log
+cut -d' ' -f7 run_clean.log > exec_time.log
 wcet=$(sort -t= -nr -k3 exec_time.log | head -1)
 bcet=$(sort -t= -nr -k3 exec_time.log | tail -1)
 avg=$(awk '{ total += $1; count++ } END { print total/count }' exec_time.log)
