@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# make sure rt tasks have all the cpu they want
+echo -1 | tee /proc/sys/kernel/sched_rt_runtime_us
+
 # the old power sampler from
 #~/repos/power-sampler/build/rt-dag-sampler  > power.csv 2>&1 &
 # the new power sampler. use -v to get the values for all power rails
