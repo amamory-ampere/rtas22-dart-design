@@ -270,7 +270,7 @@ void run_bm (char target_file[50], int sleep_per, unsigned iterations, int verbo
 			}
 			counter++;
 		}
-        sleep(sleep_per);
+        usleep(sleep_per);
     }
     fclose(sav_ptr);
 }
@@ -305,7 +305,7 @@ int main(int argc, char *argv[]) {
 		switch (opt) {
 
 			case 't':
-				printf("Running with sleep @ %d\n", atoi(optarg));
+				printf("Running with sleep @ %d us\n", atoi(optarg));
 				sleep_per = atoi(optarg);
 				break;
 			case 'o':
