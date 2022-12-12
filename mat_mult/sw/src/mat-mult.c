@@ -32,6 +32,7 @@ const int hw_id = 100;
 // https://www.kernel.org/doc/html/latest/trace/ftrace.html
 static int trace_fd = -1;
 
+/*
 void trace_write(const char *fmt, ...)
 {
         va_list ap;
@@ -47,6 +48,7 @@ void trace_write(const char *fmt, ...)
 
         write(trace_fd, buf, n);
 }
+*/
 
 
 void print_mat(data_t *base_idx, unsigned int size)
@@ -85,6 +87,7 @@ int main (int argc, char **argv)
 	printf(" starting Matrix Multiplication[%d][%d]\n",MAT_SIZE,MAT_SIZE);
 	int retval;
 	int idx,aux,i,j;
+    int error_code=0;
 	data_t mem_expected_out[MAT_SIZE*MAT_SIZE];
 	struct timespec start, end;
 
@@ -191,7 +194,6 @@ int main (int argc, char **argv)
 	printf("Time taken by CPU is : %09f\n", time_taken);
 #endif
 
-    int error_code=0;
 #ifdef COMP_OUT
 	if (memcmp(mem_out, mem_expected_out, MAT_SIZE*MAT_SIZE*sizeof(data_t))){
 		printf("Mismatch!\n");
