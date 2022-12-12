@@ -4,6 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
+#include <sys/fcntl.h> // O_WRONLY
 #include "fred_lib.h"
 
 typedef uint64_t data_t;
@@ -23,9 +24,30 @@ const int hw_id = 100;
 #define FPGA_ENABLED
 #endif
 
-
 // # of times the enabled computation is called
 #define REPEAT 100
+
+// trying some minimal code to use ftrace markers
+// https://stackoverflow.com/questions/50050973/how-to-use-trace-marker-in-ftrace
+// https://www.kernel.org/doc/html/latest/trace/ftrace.html
+static int trace_fd = -1;
+
+void trace_write(const char *fmt, ...)
+{
+        va_list ap;
+        char buf[256];
+        int n;
+
+        if (trace_fd < 0)
+                return;
+
+        va_start(ap, fmt);
+        n = vsnprintf(buf, 256, fmt, ap);
+        va_end(ap);
+
+        write(trace_fd, buf, n);
+}
+
 
 void print_mat(data_t *base_idx, unsigned int size)
 {
@@ -62,42 +84,46 @@ int main (int argc, char **argv)
 {
 	printf(" starting Matrix Multiplication[%d][%d]\n",MAT_SIZE,MAT_SIZE);
 	int retval;
-	int error_code = 0,idx,aux,i,j;
+	int idx,aux,i,j;
 	data_t mem_expected_out[MAT_SIZE*MAT_SIZE];
 	struct timespec start, end;
 
 	struct fred_data *fred;
 	struct fred_hw_task *hw_ip;
-    
+
+//    trace_fd = open("/sys/kernel/tracing/trace_marker", O_WRONLY);
+
 #ifdef FPGA_ENABLED
+//    trace_write("fred_client_init: start");
 	retval = fred_init(&fred);
 	if (retval) {
 		printf("fred_init failed for hw-task %u\n", hw_id);
-		error_code = 1;
+		return retval;
 	}
 	
 	// Bind with HW-memcpy having hw-id 100
 	retval = fred_bind(fred, &hw_ip, hw_id);
 	if (retval) {
 		printf("fred_bind failed for hw-task %u\n", hw_id);
-		error_code = 1;
+		return retval;
 	}
 
 	mem_a  = fred_map_buff(fred, hw_ip, 0);
 	if (!mem_a) {
 		printf("fred_map_buff failed on buff 0 for mem_a\n");
-		error_code = 1;
+		return retval;
 	}
 	mem_b  = fred_map_buff(fred, hw_ip, 1);
 	if (!mem_b) {
 		printf("fred_map_buff failed on buff 1 for mem_b\n");
-		error_code = 1;
+		return retval;
 	}
 	mem_out = fred_map_buff(fred, hw_ip, 2);
 	if (!mem_out) {
 		printf("fred_map_buff failed on buff 2 for mem_out\n");
-		error_code = 1;
+		return retval;
 	}
+//    trace_write("fred_client_init: end");
 #else
 	mem_a = (data_t*)malloc(MAT_SIZE*MAT_SIZE*sizeof(data_t));
 	mem_b = (data_t*)malloc(MAT_SIZE*MAT_SIZE*sizeof(data_t));
@@ -135,10 +161,12 @@ int main (int argc, char **argv)
   #ifdef FPGA_ENABLED_TIMED
 	// Call fred IP
 	clock_gettime(CLOCK_MONOTONIC, &start);
+//        trace_write("fred_client_accel %d: request",r);
 	retval = fred_accel(fred, hw_ip);
+//        trace_write("fred_client_accel %d: end",r);
 	if (retval) {
 		printf("fred_accel failed for hw-task %u\n", hw_id);
-		error_code = 1;
+		return retval;
 	}
 	clock_gettime(CLOCK_MONOTONIC, &end);		
 
@@ -163,6 +191,7 @@ int main (int argc, char **argv)
 	printf("Time taken by CPU is : %09f\n", time_taken);
 #endif
 
+    int error_code=0;
 #ifdef COMP_OUT
 	if (memcmp(mem_out, mem_expected_out, MAT_SIZE*MAT_SIZE*sizeof(data_t))){
 		printf("Mismatch!\n");
@@ -201,6 +230,7 @@ int main (int argc, char **argv)
 
 	//cleanup and finish
 	fred_free(fred);
+//       close(trace_fd);
 	printf("Fred finished\n");
 
 	return(error_code);

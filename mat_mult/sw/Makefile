@@ -7,6 +7,8 @@ cxx_srcs += $(wildcard ./src/*.cpp)
 objs = $(srcs:.c=.o) $(cxx_srcs:.cpp=.o)
 deps = $(objs:.o=.d)
 
+# add this parameters for tracing
+# -pg or -finstrument-functions
 CFLAGS += -I $(fred_dir) -I $(fred_dir)/include -g  -O2 # -Wall  -Werror
 CXXFLAGS += $(CFLAGS)
 LDFLAGS += -L $(fred_dir) -L $(fred_dir)/lib -lfred
